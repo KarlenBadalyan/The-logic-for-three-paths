@@ -16,13 +16,42 @@ btn.addEventListener("click" , () =>{
     block.style.width = width.value + "px";
     block.style.height = heigth.value + "px";
     block.style.color = color.value;
-    block.style.backgroundColor = backgroundColor.value ;
-    block.style.content = content.content;
+    block.style.backgroundColor = bgColor.value ;
+    block.innerText = content.value;
     block.style.display = "flex";
     block.style.justifyContent = "center";
     block.style.alignItems = "center";
     block.style.fontSize = "20px";
     block.style.fontFamily = "cursive";
-    
-})
+    container2.append(block)
+
+    document.querySelector(".css-block").innerHTML =`
+    <p class ="item"> ${select.value}{</p>
+        <p class="text">width: ${width.value}px</p>
+        <p class="text">height:${heigth.value}px</p>
+        <p class="text">color: ${color.value}</p>
+        <p class="text">bgColor: ${bgColor.value}</p>
+        <p class="text">content: ${content.value}</p>
+        <p class="item">}</p>
+
+    `;
+    let items = [...document.querySelectorAll(".item")];
+    items.map(item => {
+        item.style.color = "aqua";
+        item.style.fontSize = "20px";
+        item.style.fontFamily = "fantasy";
+    });
+    let texts = [...document.querySelectorAll(".text")];
+    // console.log(text);
+    texts.map (el => {
+        el.style.color = "white";
+        el.style.fontSize = "20px";
+        el.style.fontFamily = "cursive";
+    })
+});
+
+
+
+
+
 
