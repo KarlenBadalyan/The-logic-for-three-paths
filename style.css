@@ -27,7 +27,7 @@ select{
     outline: none;
     margin-left: 82px;
 }
-.containers{
+.containers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
@@ -45,7 +45,7 @@ select{
     margin-left: 82px;
 }
 
->.btn:hover{
+.btn:hover{
     background-color: silver;
     transition: 0.1s linear;
 }
